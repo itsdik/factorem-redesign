@@ -14,15 +14,15 @@ export default function HowItWorks() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 font-mono">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 font-mono">
             How It Works
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark font-display mb-4">
-            From CAD file to delivered part — we manage every step
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            From CAD file to delivered part -- we manage every step
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Upload once. We handle the rest. No supplier management, no logistics coordination,
-            no quality guesswork.
+            Upload once. We handle factory selection, production, inspection, and
+            shipping. You focus on the engineering.
           </p>
         </motion.div>
 
@@ -37,16 +37,18 @@ export default function HowItWorks() {
             <motion.div
               key={step.step}
               variants={staggerItem}
-              className={`rounded-2xl p-6 md:p-8 bg-white border border-border shadow-[0_2px_20px_rgba(26,35,50,0.03)] ${
-                step.step === 3 ? "border-l-4 border-l-accent" : ""
+              className={`rounded-2xl p-6 md:p-8 bg-white border border-border shadow-[0_2px_20px_rgba(11,17,32,0.03)] ${
+                step.step === 3 ? "border-l-4 border-l-primary" : ""
               }`}
             >
               <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light flex items-center justify-center">
-                  <span className="text-sm font-bold text-accent font-mono">{step.step}</span>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-sm font-bold text-primary font-mono">
+                    {step.step}
+                  </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-dark font-display mb-1.5">
+                  <h3 className="text-lg font-semibold text-dark mb-1.5">
                     {step.title}
                   </h3>
                   <p className="text-muted text-[15px] leading-relaxed">
@@ -55,9 +57,12 @@ export default function HowItWorks() {
                   {step.detail && (
                     <ul className="mt-4 space-y-2">
                       {step.detail.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-[15px] text-muted">
+                        <li
+                          key={item}
+                          className="flex items-start gap-2 text-[15px] text-muted"
+                        >
                           <svg
-                            className="w-4 h-4 text-accent mt-0.5 flex-shrink-0"
+                            className="w-4 h-4 text-primary mt-0.5 flex-shrink-0"
                             viewBox="0 0 16 16"
                             fill="none"
                           >
@@ -89,9 +94,9 @@ export default function HowItWorks() {
         >
           <a
             href="https://app.factorem.co/getquotenow?source=homepage_workflow"
-            className="inline-block px-7 py-3.5 rounded-xl bg-accent text-white font-semibold text-[15px] hover:bg-accent-hover transition-all animate-cta-pulse cursor-pointer"
+            className="inline-block px-7 py-3.5 rounded-xl bg-primary text-white font-semibold text-[15px] hover:bg-primary-hover transition-all animate-cta-pulse cursor-pointer"
           >
-            Start My Secure Quote →
+            Start My Secure Quote
           </a>
         </motion.div>
       </div>

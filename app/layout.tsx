@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Factorem — Custom Parts, Managed from Design to Delivery",
+  title: "Factorem -- Manufacturing for the Hardest Problems",
   description:
-    "Upload your CAD. Get AI-powered DFM feedback and pricing in hours. Our engineering team manages production, quality inspection, and logistics end-to-end.",
+    "Precision parts for Photonics, Quantum, Robotics, Defense, and Aerospace. Upload your CAD, get AI-powered DFM and pricing in hours. We manage production, quality, and logistics end-to-end.",
 };
 
 export default function RootLayout({

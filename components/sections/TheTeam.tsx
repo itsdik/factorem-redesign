@@ -42,11 +42,11 @@ export default function TheTeam() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 font-mono">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 font-mono">
             Your Team
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark font-display mb-4">
-            Real engineers manage your order
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            Engineers who understand what&apos;s at stake
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
             Not a black box. Not a matching algorithm. A dedicated team of manufacturing
@@ -66,12 +66,12 @@ export default function TheTeam() {
               key={member.role}
               variants={staggerItem}
               whileHover={{ y: -4 }}
-              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(26,35,50,0.03)] hover:shadow-[0_8px_24px_rgba(26,35,50,0.06)] transition-all text-center"
+              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(11,17,32,0.03)] hover:shadow-[0_8px_24px_rgba(11,17,32,0.06)] transition-all text-center"
             >
-              <div className="w-14 h-14 rounded-2xl bg-accent-light text-accent flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mx-auto mb-4">
                 {teamIcons[member.icon]}
               </div>
-              <h3 className="text-base font-semibold text-dark font-display mb-2">
+              <h3 className="text-base font-semibold text-dark mb-2">
                 {member.role}
               </h3>
               <p className="text-muted text-sm leading-relaxed">

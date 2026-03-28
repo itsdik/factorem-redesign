@@ -4,33 +4,28 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 import { painPoints } from "@/lib/content";
 
 const iconMap: Record<string, React.ReactNode> = {
-  mail: (
+  target: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
     </svg>
   ),
-  refresh: (
+  lock: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21.5 2v6h-6" />
-      <path d="M2.5 22v-6h6" />
-      <path d="M2.5 11.5a10 10 0 0 1 18.8-4.3" />
-      <path d="M21.5 12.5a10 10 0 0 1-18.8 4.2" />
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
     </svg>
   ),
-  clipboard: (
+  clock: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-      <path d="m9 14 2 2 4-4" />
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
     </svg>
   ),
-  truck: (
+  puzzle: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h1" />
-      <path d="M15 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 13.52 8H14" />
-      <circle cx="17" cy="18" r="2" />
-      <circle cx="7" cy="18" r="2" />
+      <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.611a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.315 8.685a.98.98 0 0 1 .837-.276c.47.07.802.48.968.925a2.501 2.501 0 1 0 3.214-3.214c-.446-.166-.855-.497-.925-.968a.979.979 0 0 1 .276-.837l1.61-1.611A2.404 2.404 0 0 1 12 2c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z" />
     </svg>
   ),
 };
@@ -46,16 +41,16 @@ export default function TheProblem() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 font-mono">
-            The Problem
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 font-mono">
+            The Challenge
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark font-display mb-4">
-            Managing manufacturing shouldn&apos;t mean<br className="hidden md:block" />
-            managing 5 suppliers
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            Hard-tech manufacturing is a<br className="hidden md:block" />
+            different kind of problem
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Engineers spend 40% of their procurement time on non-engineering tasks —
-            chasing quotes, managing suppliers, and coordinating logistics.
+            When you&apos;re building at the frontier of physics and engineering,
+            generic job shops and marketplace platforms don&apos;t cut it.
           </p>
         </motion.div>
 
@@ -70,12 +65,12 @@ export default function TheProblem() {
             <motion.div
               key={point.title}
               variants={staggerItem}
-              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(26,35,50,0.03)] hover:shadow-[0_8px_24px_rgba(26,35,50,0.06)] transition-all"
+              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(11,17,32,0.03)] hover:shadow-[0_8px_24px_rgba(11,17,32,0.06)] transition-all"
             >
-              <div className="w-11 h-11 rounded-xl bg-accent-light text-accent flex items-center justify-center mb-4">
+              <div className="w-11 h-11 rounded-xl bg-primary/5 text-primary flex items-center justify-center mb-4">
                 {iconMap[point.icon]}
               </div>
-              <h3 className="text-lg font-semibold text-dark font-display mb-2">
+              <h3 className="text-lg font-semibold text-dark mb-2">
                 {point.title}
               </h3>
               <p className="text-muted text-[15px] leading-relaxed">

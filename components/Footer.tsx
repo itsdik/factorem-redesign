@@ -8,15 +8,17 @@ const footerLinks = {
     { label: "Injection Molding", href: "https://factorem.co/injection-molding" },
     { label: "Surface Finishing", href: "https://factorem.co/surface-finishing" },
   ],
-  Platform: [
-    { label: "Get a Quote", href: "https://app.factorem.co/getquotenow" },
-    { label: "Sign In", href: "https://app.factorem.co" },
-    { label: "Parts Gallery", href: "https://factorem.co/parts-gallery" },
+  Industries: [
+    { label: "Photonics", href: "#capabilities" },
+    { label: "Quantum", href: "#capabilities" },
+    { label: "Robotics", href: "#capabilities" },
+    { label: "Defense", href: "#capabilities" },
+    { label: "Aerospace", href: "#capabilities" },
   ],
   Company: [
     { label: "About Us", href: "https://factorem.co/about" },
     { label: "Blog", href: "https://factorem.co/blog" },
-    { label: "Partnerships", href: "https://factorem.co/partnerships" },
+    { label: "Parts Gallery", href: "https://factorem.co/parts-gallery" },
     { label: "Contact", href: "mailto:sales@factorem.co" },
   ],
 };
@@ -28,24 +30,28 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand + addresses */}
           <div className="lg:col-span-2">
-            <span className="text-xl font-bold text-white font-display mb-4 block tracking-wide">
+            <span className="text-xl font-bold text-white mb-2 block tracking-wide">
               factorem
             </span>
-            <p className="text-sm leading-relaxed mb-4">
-              Custom Parts, Managed from Design to Delivery.
+            <p className="text-sm leading-relaxed mb-4 text-white/50">
+              Manufacturing for the hardest problems.
             </p>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1 font-mono">Singapore</p>
+                <p className="text-white/40 text-xs uppercase tracking-wider mb-1 font-mono">
+                  Singapore
+                </p>
                 <p>71 Ayer Rajah Crescent, #06-14, Singapore 139951</p>
               </div>
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1 font-mono">United States</p>
+                <p className="text-white/40 text-xs uppercase tracking-wider mb-1 font-mono">
+                  United States
+                </p>
                 <p>Colorado Springs, CO</p>
               </div>
             </div>
             <div className="flex items-center gap-3 mt-4">
-              <span className="px-2.5 py-1 rounded text-xs font-medium bg-white/10 text-[#C2782A] font-mono">
+              <span className="px-2.5 py-1 rounded text-xs font-medium bg-white/10 text-primary-light font-mono">
                 ISO 9001
               </span>
               <a
@@ -54,7 +60,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-sm text-white/50 hover:text-white transition-colors cursor-pointer"
               >
-                WhatsApp →
+                WhatsApp
               </a>
             </div>
           </div>
@@ -68,8 +74,8 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="text-sm text-white/50 hover:text-white transition-colors cursor-pointer"
                     >
                       {link.label}

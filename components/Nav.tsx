@@ -26,14 +26,17 @@ export default function Nav() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-bg/95 backdrop-blur-md border-b border-border shadow-[0_1px_8px_rgba(26,35,50,0.04)]"
+          ? "bg-bg/95 backdrop-blur-md border-b border-border shadow-[0_1px_8px_rgba(11,17,32,0.04)]"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-dark font-display tracking-wide">
+          <span className="text-xl font-bold text-dark tracking-wide">
             factorem
+          </span>
+          <span className="hidden sm:inline text-xs font-medium text-muted-light border-l border-border pl-2 ml-1">
+            Hard-Tech Manufacturing
           </span>
         </a>
 
@@ -60,7 +63,7 @@ export default function Nav() {
           </a>
           <a
             href="https://app.factorem.co/getquotenow?source=homepage"
-            className="px-5 py-2.5 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-all cursor-pointer"
+            className="px-5 py-2.5 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-primary-hover transition-all cursor-pointer"
           >
             Get Quote
           </a>
@@ -101,7 +104,7 @@ export default function Nav() {
           ))}
           <a
             href="https://app.factorem.co/getquotenow?source=homepage"
-            className="block w-full text-center px-5 py-2.5 rounded-xl bg-accent text-white font-semibold text-sm hover:bg-accent-hover transition-all cursor-pointer"
+            className="block w-full text-center px-5 py-2.5 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-primary-hover transition-all cursor-pointer"
           >
             Get Quote
           </a>

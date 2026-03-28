@@ -14,14 +14,14 @@ export default function Objections() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 font-mono">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 font-mono">
             FAQs
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark font-display mb-4">
-            Still on the fence?
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            Questions we hear from hard-tech teams
           </h2>
           <p className="text-lg text-muted max-w-xl mx-auto">
-            We hear these a lot. Here are straight answers.
+            Straight answers for engineering and procurement leads.
           </p>
         </motion.div>
 
@@ -36,9 +36,9 @@ export default function Objections() {
             <motion.div
               key={obj.question}
               variants={staggerItem}
-              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(26,35,50,0.03)]"
+              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(11,17,32,0.03)]"
             >
-              <h3 className="text-base font-semibold text-dark font-display mb-2">
+              <h3 className="text-base font-semibold text-dark mb-2">
                 &ldquo;{obj.question}&rdquo;
               </h3>
               <p className="text-muted text-[15px] leading-relaxed">

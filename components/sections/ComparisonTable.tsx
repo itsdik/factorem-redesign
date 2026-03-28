@@ -14,14 +14,14 @@ export default function ComparisonTable() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 font-mono">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 font-mono">
             The Difference
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark font-display mb-4">
-            Your current process vs. with Factorem
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            Generic job shop vs. Factorem
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Side-by-side — no spin, just facts.
+            Side-by-side -- built for teams where precision is non-negotiable.
           </p>
         </motion.div>
 
@@ -30,7 +30,7 @@ export default function ComparisonTable() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="rounded-2xl border border-border overflow-hidden shadow-[0_2px_20px_rgba(26,35,50,0.03)]"
+          className="rounded-2xl border border-border overflow-hidden shadow-[0_2px_20px_rgba(11,17,32,0.03)]"
         >
           {/* Header */}
           <div className="grid grid-cols-3 bg-bg-alt border-b border-border">
@@ -38,9 +38,9 @@ export default function ComparisonTable() {
               Metric
             </div>
             <div className="p-4 text-sm font-semibold text-muted-light uppercase tracking-wider text-center font-mono">
-              Old Way
+              Generic Shop
             </div>
-            <div className="p-4 text-sm font-semibold text-accent uppercase tracking-wider text-center font-mono">
+            <div className="p-4 text-sm font-semibold text-primary uppercase tracking-wider text-center font-mono">
               With Factorem
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function ComparisonTable() {
               <div className="p-4 text-sm text-muted text-center">
                 {row.oldWay}
               </div>
-              <div className="p-4 text-sm text-accent font-medium text-center bg-accent-light/50">
+              <div className="p-4 text-sm text-primary font-medium text-center bg-primary/[0.03]">
                 {row.factorem}
               </div>
             </motion.div>
@@ -76,9 +76,9 @@ export default function ComparisonTable() {
         >
           <a
             href="https://app.factorem.co/getquotenow?source=homepage_comparison"
-            className="inline-block px-7 py-3.5 rounded-xl bg-accent text-white font-semibold text-[15px] hover:bg-accent-hover transition-all cursor-pointer"
+            className="inline-block px-7 py-3.5 rounded-xl bg-primary text-white font-semibold text-[15px] hover:bg-primary-hover transition-all cursor-pointer"
           >
-            Try It on Your Next Part →
+            Try It on Your Next Part
           </a>
         </motion.div>
       </div>

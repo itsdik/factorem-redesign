@@ -14,15 +14,15 @@ export default function Capabilities() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 font-mono">
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 font-mono">
             Capabilities
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark font-display mb-4">
-            One partner, every manufacturing method
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            Every process your hardware needs
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            CNC machining, 3D printing, sheet metal, injection molding — all managed
-            through a single upload. No MOQs.
+            CNC machining, 3D printing, sheet metal, injection molding -- all managed
+            through a single upload. Exotic materials and tight tolerances included.
           </p>
         </motion.div>
 
@@ -38,10 +38,10 @@ export default function Capabilities() {
               key={cap.title}
               variants={staggerItem}
               whileHover={{ y: -4 }}
-              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(26,35,50,0.03)] hover:shadow-[0_8px_24px_rgba(26,35,50,0.06)] transition-all"
-              style={{ borderTopColor: "var(--color-accent)", borderTopWidth: "3px" }}
+              className="rounded-2xl p-6 bg-white border border-border shadow-[0_2px_20px_rgba(11,17,32,0.03)] hover:shadow-[0_8px_24px_rgba(11,17,32,0.06)] transition-all"
+              style={{ borderTopColor: "var(--color-primary)", borderTopWidth: "3px" }}
             >
-              <h3 className="text-lg font-semibold text-dark font-display mb-2">
+              <h3 className="text-lg font-semibold text-dark mb-2">
                 {cap.title}
               </h3>
               <p className="text-muted text-[15px] leading-relaxed mb-4">
@@ -51,7 +51,7 @@ export default function Capabilities() {
                 {cap.materials.map((mat) => (
                   <span
                     key={mat}
-                    className="px-2.5 py-0.5 text-xs rounded-md bg-accent-light text-accent/80 font-medium"
+                    className="px-2.5 py-0.5 text-xs rounded-md bg-primary/5 text-primary/80 font-medium"
                   >
                     {mat}
                   </span>

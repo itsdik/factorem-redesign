@@ -5,11 +5,21 @@ import { fadeInUp } from "@/lib/animations";
 export default function FinalCTA() {
   return (
     <section className="px-6 py-16 md:py-24 bg-bg-dark relative overflow-hidden">
-      {/* Warm gradient orb */}
+      {/* Grid pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-30"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(12,93,188,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(12,93,188,0.08) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+
+      {/* Gradient orb */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(194,120,42,0.12) 0%, transparent 55%)",
+          background: "radial-gradient(circle, rgba(12,93,188,0.15) 0%, transparent 55%)",
         }}
       />
 
@@ -20,19 +30,19 @@ export default function FinalCTA() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-display mb-4">
-            Start your next project with Factorem
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Manufacturing for the hardest problems
           </h2>
           <p className="text-lg text-white/60 mb-8 max-w-lg mx-auto">
             Upload your CAD file and get a quote within 24 hours.
-            No MOQs. No commitments. No hidden fees.
+            Precision tolerances. Exotic materials. Full documentation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="https://app.factorem.co/getquotenow?source=homepage_cta"
-              className="px-7 py-3.5 rounded-xl bg-accent text-white font-semibold text-[15px] hover:bg-accent-hover transition-all animate-cta-pulse cursor-pointer"
+              className="px-7 py-3.5 rounded-xl bg-primary text-white font-semibold text-[15px] hover:bg-primary-hover transition-all animate-cta-pulse cursor-pointer"
             >
-              Get Your Quote →
+              Start My Secure Quote
             </a>
             <a
               href="https://calendly.com/hardikdobariya/30min"

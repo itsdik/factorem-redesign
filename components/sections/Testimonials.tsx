@@ -9,7 +9,7 @@ export default function Testimonials() {
       id="testimonials"
       className="px-6 py-16 md:py-24"
       style={{
-        background: "linear-gradient(135deg, #1A2332 0%, #252D3C 50%, #1B3A5C 100%)",
+        background: "linear-gradient(135deg, #0B1120 0%, #111827 50%, #0C2D57 100%)",
       }}
     >
       <div className="max-w-[1200px] mx-auto">
@@ -20,11 +20,11 @@ export default function Testimonials() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-[#C2782A] uppercase tracking-wider mb-3 font-mono">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 font-mono">
             Results
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-display mb-4">
-            Engineers trust us with their production
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Trusted by teams pushing the frontier
           </h2>
         </motion.div>
 
@@ -42,7 +42,7 @@ export default function Testimonials() {
               className="rounded-2xl p-6 bg-white/[0.06] border border-white/[0.08] backdrop-blur-sm"
             >
               <div className="mb-4">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#C2782A] bg-[#C2782A]/10 font-mono">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-accent bg-accent/10 font-mono">
                   {t.metric}
                 </span>
               </div>
@@ -68,9 +68,9 @@ export default function Testimonials() {
             href="https://calendly.com/hardikdobariya/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-7 py-3.5 rounded-xl border border-[#C2782A]/30 text-white font-semibold text-[15px] hover:bg-[#C2782A]/10 transition-all cursor-pointer"
+            className="inline-block px-7 py-3.5 rounded-xl border border-accent/30 text-white font-semibold text-[15px] hover:bg-accent/10 transition-all cursor-pointer"
           >
-            Schedule a Call →
+            Schedule a Call
           </a>
         </motion.div>
       </div>
